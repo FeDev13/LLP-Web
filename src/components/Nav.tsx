@@ -3,7 +3,7 @@ import Logo from "../assets/2.png"
 export default function Nav() {
 
   return (
-    <div className="navbar bg-black sticky top-0 h-40 flex">
+    <div className="navbar bg-black sticky top-0 h-40 flex z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -18,7 +18,10 @@ export default function Nav() {
 
       </div>
       <div className="navbar-center hidden lg:flex">
-        <div className=" flex bg-slate-400 w-96"><img src={Logo} alt="logo" className="object-cover h-20 w-96" /></div>
+        <div className=" flex bg-slate-400 w-96">
+          <Link to="/"><img src={Logo} alt="logo" className="object-cover h-20 w-96" /></Link>
+
+        </div>
         <ul className="menu menu-horizontal px-1 text-white uppercase text-3xl">
           <button className=" hover:underline decoration-red-600 uppercase mx-4"><Link to="/Nosotros"> Nosotros</Link></button>
           <button className=" hover:underline decoration-red-600 uppercase mx-4"><Link to="/Areas"> areas</Link></button>

@@ -5,7 +5,7 @@ import { Hero } from "./components/Hero"
 import { Honorarios } from './components/Honorarios'
 import { Nosotros } from './components/Nosotros'
 import { Areas } from './components/Areas'
-
+import Footer from "./components/Footer"
 function App() {
   return (
     <>
@@ -17,6 +17,7 @@ function App() {
           <Route path='/Areas' element={<Areas />} />
           <Route path='/Nosotros' element={<Nosotros />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
 
     </>
