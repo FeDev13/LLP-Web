@@ -1,20 +1,11 @@
-import React from 'react'
+import { Typography } from "@material-tailwind/react"; 
 
-import { Typography } from "@material-tailwind/react";
- 
 const LINKS = [
+  
   {
-    title: "Product",
-    items: ["Overview", "Features", "Solutions", "Tutorials"],
-  },
-  {
-    title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
-  },
-  {
-    title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
-  },
+    title: "Informacion util",
+    items: ["Diag Pueyrredon 2970 piso 3", "+5492235044778", "estudiojuridicomaroasoc@gmail.com"],
+  }
 ];
  
 const currentYear = new Date().getFullYear();
@@ -31,7 +22,7 @@ export default function Footer() {
                 <Typography
                   variant="small"
                   color="blue-gray"
-                  className="mb-3 font-medium opacity-40"
+                  className="mb-3 opacity-40 font-normal"
                 >
                   {title}
                 </Typography>
@@ -56,8 +47,7 @@ export default function Footer() {
             variant="small"
             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
           >
-            &copy; {currentYear} <a href="https://material-tailwind.com/">Material Tailwind</a>. All
-            Rights Reserved.
+            &copy; {currentYear} <a href="https://github.com/FeDev13">App web desarrollada por FeDev13</a>.
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">

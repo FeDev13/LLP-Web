@@ -4,6 +4,7 @@ export default function Nav() {
 
   return (
     <div className="navbar bg-black sticky top-0 h-40 flex z-10">
+      <Link to="/"><img src={Logo} alt="logo" className="object-cover h-20 w-96" /></Link>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
