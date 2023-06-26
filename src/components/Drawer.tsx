@@ -1,35 +1,35 @@
 import { useState } from "react";
-import  {app} from "../credentials"
+import { app } from "../credentials"
 import useForm from "../Hooks/useForm";
-import {getFirestore, collection, addDoc } from "firebase/firestore"
+import { getFirestore, collection, addDoc } from "firebase/firestore"
 
 const db = getFirestore(app)
 
 export default function Drawers() {
 
-  const[lista, setLista] = useState<any[]>([])
+  const [lista, setLista] = useState<any[]>([])
 
 
-  const [input, handleInputChangen, setInput]=useForm({
-    nombre:"",  //variables de estado
-    email:"",
-    consulta:""
+  const [input, handleInputChangen, setInput] = useForm({
+    nombre: "",  //variables de estado
+    email: "",
+    consulta: ""
   })
 
-const addConsulta = async (e:React.ChangeEvent<HTMLInputElement>)=>{
-e.preventDefault()
-/* setLista([...lista, input]) */
-try {
-  await addDoc(collection(db, "consultas"), {
-    ...lista
-  })
-} catch (error) {
-  console.log(error);
-  
-}
-setInput({nombre:"", email:"", consulta:""})
+  const addConsulta = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault()
+    setLista([...lista, input])
+    try {
+      await addDoc(collection(db, "consultas"), {
+        ...lista
+      })
+    } catch (error) {
+      console.log(error);
 
-}
+    }
+    setInput({ nombre: "", email: "", consulta: "" })
+
+  }
 
 
 
@@ -43,24 +43,17 @@ setInput({nombre:"", email:"", consulta:""})
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full bg-red-600 text-base-content text-3xl">
-        
-          <form className=" flex flex-col justify-between" action="POST" onSubmit={(e:any)=>addConsulta(e)}>
+
+          <form className=" flex flex-col justify-between" action="POST" onSubmit={(e: any) => addConsulta(e)}>
             <label className=" mb-4" htmlFor="name">Nombre completo</label>
-            <input className=" mb-4 rounded-md outline-none" type="text" name="nombre" id="name" onChange={handleInputChangen} value={input.nombre} placeholder="Nombre y apellido"autoFocus required/>
+            <input className=" mb-4 rounded-md outline-none" type="text" name="nombre" id="name" onChange={handleInputChangen} value={input.nombre} placeholder="Nombre y apellido" autoFocus required />
             <label className=" mb-4" htmlFor="">Email</label>
-            <input className=" mb-4 rounded-md outline-none" type="email" name="email" id="email" onChange={handleInputChangen} value={input.email} placeholder="correo electronico" autoFocus required/>
+            <input className=" mb-4 rounded-md outline-none" type="email" name="email" id="email" onChange={handleInputChangen} value={input.email} placeholder="correo electronico" autoFocus required />
             <label className=" mb-4" htmlFor="consulta">Escriba su consulta</label>
-            <textarea className=" rounded-md outline-none text-black" name="consulta" id=""  cols={20} rows={7} placeholder="Maximo 120 caracteres" maxLength={120} onChange={handleInputChangen} value={input.consulta}  ></textarea>
+            <textarea className=" rounded-md outline-none text-black" name="consulta" id="" cols={20} rows={7} placeholder="Maximo 120 caracteres" maxLength={120} onChange={handleInputChangen} value={input.consulta}  ></textarea>
             <button type="submit" className=" text-center m-8 w-[70%] rounded-r-md bg-white text-black">Enviar</button>
           </form>
 
-        </ul>
-        <ul>
-          {lista?.map((item, i)=>(
-            <li>
-              <p>{item.nombre}{item.email}{item.consulta} </p>
-            </li>
-          ))}
         </ul>
       </div>
     </div>
