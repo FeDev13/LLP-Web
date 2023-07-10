@@ -1,27 +1,28 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Nav from "./components/Nav"
-import { Hero } from "./components/Hero"
-import { Honorarios } from './components/Honorarios'
-import { Nosotros } from './components/Nosotros'
-import { Areas } from './components/Areas'
-import Footer from "./components/Footer"
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import { Hero } from "./components/Hero";
+import { Honorarios } from "./components/Honorarios";
+import { Nosotros } from "./components/Nosotros";
+import { Areas } from "./components/Areas";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Nav />
-        <Routes>
-          <Route path='/' element={<Hero />} />
-          <Route path='/Honorarios' element={<Honorarios />} />
-          <Route path='/Areas' element={<Areas />} />
-          <Route path='/Nosotros' element={<Nosotros />} />
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
 
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/Honorarios" element={<Honorarios />} />
+          <Route path="/Areas" element={<Areas />} />
+          <Route path="/Nosotros" element={<Nosotros />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

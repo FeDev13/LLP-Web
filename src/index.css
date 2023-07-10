@@ -9,9 +9,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Big Shoulders Display', cursive;
-    color: white;
+    color: black;
 }
 
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0,0,0,0.80)), url("./assets/imghome_01.jpg");
+    color: white;
 }
