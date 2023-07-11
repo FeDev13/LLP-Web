@@ -22,7 +22,7 @@ export const Laborales = () => {
       </p>
       <p className=" text-white mb-6">
         Asesoramiento en cuanto a despidos e indemnizaciones laborales,
-        redaccion de telegramas laborales y homologacion de acuerdos{" "}
+        redaccion de telegramas laborales y homologacion{" "}
       </p>{" "}
       <button className=" bg-transparent hover:underline decoration-red-600 rounded-md text-white p-3">
         {" "}
