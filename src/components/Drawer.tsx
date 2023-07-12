@@ -43,7 +43,7 @@ export default function Drawers() {
       <div className="drawer-content">
         <label
           htmlFor="my-drawer"
-          className="btn bg-transparent drawer-button text-white text-2xl"
+          className=" bg-yellow-500 drawer-button text-black text-3xl rounded-lg p-3 font-bold cursor-pointer"
         >
           Consultenos
         </label>

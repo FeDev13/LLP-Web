@@ -18,19 +18,20 @@ export default function Footer() {
   return (
     <footer className="relative w-full mt-32 bg-black text-2xl">
       <div className="mx-auto w-full max-w-7xl p-10">
-        <div className="grid grid-cols-1 justify-center md:grid-cols-2">
+        <div className="grid grid-cols-2 justify-center  md:grid-cols-3">
           <img
             src="https://camdp.org.ar/wp/wp-content/themes/appointment/images/colproba.png"
             className=" bg-white rounded-3xl"
-            alt=""
+            alt="logo colegio colproba"
           />
-          <div className="grid grid-cols-1 justify-center mt-8">
+
+          <div className="grid grid-cols-1 justify-center mt-8 ml-10">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography
-                  variant="small"
+                  variant="large"
                   color="white"
-                  className="mb-3  font-normal"
+                  className="mb-3 uppercase text-2xl"
                 >
                   {title}
                 </Typography>
