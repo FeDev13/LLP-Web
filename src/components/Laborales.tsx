@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Laborales = () => {
   return (
     <div className=" grid h-20 flex-grow card  rounded-box place-items-center w-1/2 mt-20 mb-48 ml-10">

@@ -102,7 +102,10 @@ export default function Drawers() {
             <button
               type="submit"
               className=" text-center m-8 w-[70%] rounded-r-md bg-white text-black"
-              onClick={notify}
+              onClick={() => {
+                notify();
+                validate();
+              }}
             >
               Enviar
             </button>
