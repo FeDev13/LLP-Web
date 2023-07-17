@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@200&family=Cinzel:wght@500&family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@200&family=Cinzel:wght@500&family=Secular+One&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Big Shoulders Display', cursive;
-    color: black;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Big Shoulders Display", cursive;
+  color: black;
 }
 
-body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0,0,0,0.80)), url("./assets/imghome_01.jpg");
-    color: white;
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./assets/imghome_01.jpg");
+  color: white;
+  width: 100%;
 }

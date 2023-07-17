@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer className="relative w-full mt-32 bg-black text-2xl">
       <div className="mx-auto w-full max-w-7xl p-10">
-        <div className="grid grid-cols-2 justify-center  md:grid-cols-3">
+        <div className="grid grid-cols-1 justify-center  md:grid-cols-3">
           <img
             src="https://camdp.org.ar/wp/wp-content/themes/appointment/images/colproba.png"
             className=" bg-white rounded-3xl"
