@@ -16,6 +16,14 @@ export default function Drawers() {
     consulta: "",
   });
 
+  const notify = () => {
+    if (input.nombre === "" || input.email === "" || input.consulta === "") {
+      toast.error("Debe completar todos los campos del formulario");
+    } else {
+      toast.success("su consulta fue enviada");
+    }
+  };
+
   const addConsulta = async (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     setLista([...lista, input]);
@@ -27,15 +35,8 @@ export default function Drawers() {
       console.log(error);
     }
     setInput({ nombre: "", email: "", consulta: "" }); //limpia los inputs
+    notify;
   };
-
-  const validate = () => {
-    if (setInput({ nombre: "", email: "", consulta: "" })) {
-      toast.error("campos vacios");
-    }
-  };
-
-  const notify = () => toast.success("Su consulta ha sido enviada");
 
   return (
     <div className="drawer mt-48 z-20">
@@ -50,13 +51,13 @@ export default function Drawers() {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 h-full bg-red-600 text-base-content text-3xl">
+        <ul className="menu p-4 w-80 h-full text-base-content text-3xl bg-yellow-500">
           <form
             className=" flex flex-col justify-between"
             action="POST"
             onSubmit={(e: any) => addConsulta(e)}
           >
-            <label className=" mb-4" htmlFor="name">
+            <label className=" mb-4 font-bold" htmlFor="name">
               Nombre completo
             </label>
             <input
@@ -70,7 +71,7 @@ export default function Drawers() {
               autoFocus
               required
             />
-            <label className=" mb-4" htmlFor="">
+            <label className=" mb-4 font-bold" htmlFor="">
               Email
             </label>
             <input
@@ -84,7 +85,7 @@ export default function Drawers() {
               autoFocus
               required
             />
-            <label className=" mb-4" htmlFor="consulta">
+            <label className=" mb-4 font-bold " htmlFor="consulta">
               Escriba su consulta
             </label>
             <textarea
@@ -101,10 +102,9 @@ export default function Drawers() {
             ></textarea>
             <button
               type="submit"
-              className=" text-center m-8 w-[70%] rounded-r-md bg-white text-black"
+              className=" text-center m-8 w-[70%] rounded-md bg-black text-white font-bold"
               onClick={() => {
                 notify();
-                validate();
               }}
             >
               Enviar
