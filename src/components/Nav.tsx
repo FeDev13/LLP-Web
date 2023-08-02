@@ -54,7 +54,7 @@ export default function Nav() {
                     height="24"
                     viewBox="0 0 24 24"
                     stroke-width="2"
-                    stroke="white"
+                    stroke="black"
                     fill="none"
                     stroke-linecap="round"
                     stroke-linejoin="round"

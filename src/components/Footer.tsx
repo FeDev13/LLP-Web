@@ -4,7 +4,6 @@ const LINKS = [
   {
     title: "Informacion util",
     items: [
-      "Diag Pueyrredon 2970 piso 3",
       "Mar del Plata",
       "+5492235044778",
       "estudiojuridicomaroasoc@gmail.com",
