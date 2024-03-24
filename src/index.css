@@ -8,12 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Big Shoulders Display", cursive;
-  color: black;
+  background-color: rgb(244, 240, 238);
 }
 
-body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("./assets/imghome_01.jpg");
-  background-size: cover;
-  color: white;
-}
+
