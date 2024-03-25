@@ -39,29 +39,29 @@ export default function Drawers() {
   };
 
   return (
-    <div className="drawer mt-48 z-20">
+    <div className="drawer z-0">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content">
+      <div className="drawer-content my-8">
         <label
           htmlFor="my-drawer"
-          className=" bg-yellow-500 drawer-button text-black text-3xl rounded-lg p-3 font-bold cursor-pointer"
+          className=" bg-yellow-950 drawer-button text-white text-base rounded-lg p-3 font-bold cursor-pointer"
         >
           Consultenos
         </label>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 h-full text-base-content text-3xl bg-yellow-500">
+        <ul className="menu p-4 w-1/2 h-full text-base-content text-base bg-yellow-500">
           <form
-            className=" flex flex-col justify-between"
+            className=" flex flex-col justify-between bg-yellow-500"
             action="POST"
             onSubmit={(e: any) => addConsulta(e)}
           >
-            <label className=" mb-4 font-bold" htmlFor="name">
+            <label className=" mb-4 font-bold bg-yellow-500 text-black" htmlFor="name">
               Nombre completo
             </label>
             <input
-              className=" mb-4 rounded-md outline-none"
+              className=" mb-4 rounded-md outline-slate-700 w-1/2 mx-auto outline-double"
               type="text"
               name="nombre"
               id="name"
@@ -71,11 +71,11 @@ export default function Drawers() {
               autoFocus
               required
             />
-            <label className=" mb-4 font-bold" htmlFor="">
+            <label className=" mb-4 font-bold bg-yellow-500 text-black" htmlFor="">
               Email
             </label>
             <input
-              className=" mb-4 rounded-md outline-none"
+              className=" mb-4 rounded-md outline-slate-700 w-1/2 mx-auto outline-double"
               type="email"
               name="email"
               id="email"
@@ -85,11 +85,11 @@ export default function Drawers() {
               autoFocus
               required
             />
-            <label className=" mb-4 font-bold " htmlFor="consulta">
+            <label className=" mb-4 font-bold bg-yellow-500 text-black" htmlFor="consulta">
               Escriba su consulta
             </label>
             <textarea
-              className=" rounded-md outline-none text-black"
+             className=" mb-4 rounded-md outline-slate-700 w-1/2 mx-auto outline"
               name="consulta"
               id=""
               cols={20}
@@ -102,7 +102,7 @@ export default function Drawers() {
             ></textarea>
             <button
               type="submit"
-              className=" text-center m-8 w-[70%] rounded-md bg-black text-white font-bold"
+              className=" text-center mx-auto w-[50%] rounded-md bg-black text-white font-bold"
               onClick={() => {
                 notify();
               }}

@@ -1,7 +1,8 @@
 import image from "../assets/aiimage.jpg";
+import { Link } from "react-router-dom";
 export const Hero = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2 my-8">
       <div className=" bg-black w-[200%]">
         <img src={image} className=" w-[50%]" alt="desk logo" />
       </div>
@@ -9,7 +10,13 @@ export const Hero = () => {
         <p className=" text-3xl font-medium bg-black p-10">
           Estudio de abogados en Mar del Plata
         </p>
-        <h1 className=" font-medium text-5xl bg-black">
+        <button className="mx-auto p-4 rounded-md text-white font-semibold bg-yellow-950 uppercase my-9 lg:hidden">
+          <Link to="/Nosotros" className="bg-yellow-950">
+            {" "}
+            Conozcanos
+          </Link>
+        </button>
+        <h1 className=" font-medium text-5xl bg-black p-10">
           Estudio juridico Maro & asoc.
         </h1>
       </div>

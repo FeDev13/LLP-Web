@@ -27,7 +27,7 @@ export default function Nav() {
 
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-white rounded-box w-96 text-2xl mr-52 text-black"
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-white rounded-box w-96 text-base mr-52 text-black"
             >
               <Link to="/">
                 <img
@@ -54,7 +54,13 @@ export default function Nav() {
                   Honorarios
                 </Link>
               </button>
-              <button className=" mr-4">
+              <button className=" mx-4">
+                <Link to="/Ubicacion" className=" bg-inherit">
+                  {" "}
+                  Nuestro estudio
+                </Link>
+              </button>
+              <button className=" text-center">
                 <ReactWhatsapp
                   number="+5492235044778"
                   element="button"
@@ -109,23 +115,29 @@ export default function Nav() {
               />
             </Link>
           </div>
-          <ul className="menu menu-horizontal px-1 text-black bg-white uppercase text-3xl font-semibold">
-            <button className=" hover:underline decoration-red-600 uppercase mx-4">
+          <ul className="menu menu-horizontal px-1 text-black bg-white uppercase text-base font-semibold">
+            <button className=" hover:underline decoration-yellow-950 uppercase mx-4">
               <Link to="/Nosotros" className="bg-white">
                 {" "}
                 Nosotros
               </Link>
             </button>
-            <button className=" hover:underline decoration-red-600 uppercase mx-4">
+            <button className=" hover:underline decoration-yellow-950 uppercase mx-4">
               <Link to="/Areas" className="bg-white">
                 {" "}
                 areas
               </Link>
             </button>
-            <button className=" hover:underline decoration-red-600 uppercase mx-4">
+            <button className=" hover:underline decoration-yellow-950 uppercase mx-4">
               <Link to="/Honorarios" className="bg-white">
                 {" "}
                 Honorarios
+              </Link>
+            </button>
+            <button className=" hover:underline decoration-yellow-950 uppercase mx-4">
+              <Link to="/Ubicacion" className="bg-white">
+                {" "}
+                Nuestro estudio
               </Link>
             </button>
             <ReactWhatsapp number="+5492235044778" element="button" message="">
