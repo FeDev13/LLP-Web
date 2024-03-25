@@ -39,7 +39,7 @@ export default function Drawers() {
   };
 
   return (
-    <div className="drawer z-0">
+    <div className="drawer z-20">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content my-8">
         <label

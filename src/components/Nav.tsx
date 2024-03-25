@@ -125,7 +125,7 @@ export default function Nav() {
             <button className=" hover:underline decoration-yellow-950 uppercase mx-4">
               <Link to="/Areas" className="bg-white">
                 {" "}
-                areas
+                Areas
               </Link>
             </button>
             <button className=" hover:underline decoration-yellow-950 uppercase mx-4">
