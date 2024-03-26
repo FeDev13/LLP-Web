@@ -29,11 +29,11 @@ export default function Nav() {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-white rounded-box w-96 text-base mr-52 text-black"
             >
-              <Link to="/">
+              <Link to="/" className="bg-white">
                 <img
                   src={Logo}
                   alt="logo"
-                  className="object-cover h-20 w-96 rounded-md"
+                  className=" h-1/2 w-[50%] rounded-md mx-auto"
                 />
               </Link>
               <button className=" mx-4">

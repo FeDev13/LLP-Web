@@ -39,7 +39,7 @@ export default function Drawers() {
   };
 
   return (
-    <div className="drawer z-20">
+    <div className="drawer z-10">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content my-8">
         <label
@@ -51,7 +51,7 @@ export default function Drawers() {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-1/2 h-full text-base-content text-base bg-yellow-500">
+        <ul className="menu p-4 w-[80%] md:w-[50%] h-full text-base-content text-base bg-yellow-500">
           <form
             className=" flex flex-col justify-between bg-yellow-500"
             action="POST"

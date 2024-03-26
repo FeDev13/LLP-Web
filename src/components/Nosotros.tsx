@@ -1,5 +1,6 @@
 import { Typography, Avatar, Rating } from "@material-tailwind/react";
-import meeting from "../assets/meeting.jpg";
+import Drawers from "./Drawer";
+import meeting from "../assets/despacho (1).jpeg";
 import logo from "../assets/maro (2).png";
 import user from "../assets/m.jpg"
 import user2 from "../assets/l.jpg"
@@ -39,6 +40,7 @@ export const Nosotros = () => {
         </div>
       </div>
       <div>
+        <Drawers/>
         <div className="px-8 text-center mt-32 ">
           <Typography variant="h2" color="black" className="mb-6 font-semibold text-xl ">
             &quot;Excelente asesoramiento, resultados inmediatos y muy buen
