@@ -10,7 +10,7 @@ export const Hero = () => {
         <p className=" text-3xl font-medium bg-black p-10">
           Estudio de abogados en Mar del Plata
         </p>
-        <button className="mx-auto p-4 rounded-md text-white font-semibold bg-yellow-950 uppercase my-9 lg:hidden">
+        <button className="mx-auto p-4 rounded-md text-white font-semibold bg-yellow-950 uppercase my-9 ">
           <Link to="/Nosotros" className="bg-yellow-950">
             {" "}
             Conozcanos
