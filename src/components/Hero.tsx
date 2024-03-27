@@ -14,7 +14,7 @@ export const Hero = () => {
         <button className="mx-auto p-4 rounded-md text-white font-semibold bg-yellow-950 uppercase my-9 ">
           <Link to="/Nosotros" className="bg-yellow-950">
             {" "}
-            Conozcanos
+            Conózcanos
           </Link>
         </button>
         <h1 className="  text-3xl font-medium bg-black p-10">
