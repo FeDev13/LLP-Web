@@ -1,4 +1,5 @@
 import image from "../assets/aiimage.jpg";
+import logo from "../assets/maro (2).png";
 import { Link } from "react-router-dom";
 export const Hero = () => {
   return (
@@ -8,9 +9,7 @@ export const Hero = () => {
       </div>
       <div className="  flex flex-col text-white my-auto">
         
-        <p className=" font-medium text-5xl bg-black p-10">
-           Estudio juridico Maro & asoc.
-        </p>
+        <img src={logo} alt="logo maro" />
         <button className="mx-auto p-4 rounded-md text-white font-semibold bg-yellow-950 uppercase my-9 ">
           <Link to="/Nosotros" className="bg-yellow-950">
             {" "}
